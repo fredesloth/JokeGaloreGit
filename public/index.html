@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><JokesGalore></title>
+    <html lang="en"></html>
+        <script src="script.js" defer></script>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <link rel="stylesheet" href="css.css"/>
+
+            <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.5/handlebars.min.js"></script>
+
+            <script defer src="Tabs.js" ></script>
+        </head>
+
+<body>
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'tabFåGrin')"id="defaultOpen">Få et grin</button>
+    <button class="tablinks" onclick="openTab(event, 'tabLavGrin')">Lav et grin til andre</button>
+</div>
+
+
+<div class="container">
+    <div id="tabFåGrin" class="tabcontent">
+    <div class="row">
+        <div class="col">
+            <label>Vælg side:</label>
+            <select id="services" onchange="jokesUpdate()">Select a site
+                <!--Othersites-->
+            </select>
+            <div class="col">
+                <ol id="jokes">
+                    <!--Jokes-->
+                </ol>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="tabLavGrin" class="tabcontent">
+    <div class="row">
+        <div class="col" id="newJoke">
+            <form method="post" action=".api/jokes/">
+            <input type="text" id="setup" placeholder="Write setup"><br/>
+            <input type="text" id="punchline" placeholder="Write punchline"><br/>
+            <button id="btnPost">Create joke</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</body>

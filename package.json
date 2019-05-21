@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/RasmusTraeholt/jokeservice",
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.21",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.3.0"
+  }
+}
