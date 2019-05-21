@@ -15,7 +15,7 @@ router
             });
     })
 
-    .post(function(req, res) {
+    .post('/jokes', (req, res) => {
         controller.createJoke(req.body.setup, req.body.punchline)
           .then(function() {
             res.json({message: 'Joke saved!'});
