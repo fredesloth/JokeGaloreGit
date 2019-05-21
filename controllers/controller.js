@@ -31,15 +31,13 @@ exports.otherSitesGet = async function () {
 };
 
 
-exports.jokeCreate = async function (setup, punchline) {
-    let joke = new joke({
-        setup,
-        punchline
+exports.createJoke = function(setup, punchline) {
+    var newJoke = new joke({
+      setup: setup,
+      punchline: punchline
     });
-     joke = await joke.save();
-    return joke
-};
-
+    return newJoke.save();
+  };
 
 exports.jokeEdit = function(id, setup, punchline) {
     return joke.findOneAndUpdate(
