@@ -2,6 +2,8 @@ const controller = require("../controllers/controller");
 const express = require('express');
 const router = express.Router();
 const fetch = require('node-fetch');
+const Joke = require('../models/joke');
+
 
 router
 
@@ -15,17 +17,14 @@ router
             });
     })
 
-    .post('/jokes', (req, res) => {
-        controller.createJoke(req.body.setup, req.body.punchline)
-          .then(function() {
-            res.json({message: 'Joke saved!'});
+    .post('/jokes', function (req, res) {
+        Joke.create(req.body);
+          res.send({
+              type: 'POST',
+              setup: req.body.setup,
+              punchline: req.body.punchline
           })
-          .catch(function(error) {
-            console.error('Error: ' + error);
-            if (error.stack) console.error(error.stack);
-            res.status(500).send(error);
-          });
-      })
+          })
 
     .get('/jokes/:id', (req, res) => {
         controller.jokeGet(req.params.id)
