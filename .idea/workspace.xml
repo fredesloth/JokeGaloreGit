@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1ffbe57-9261-49a1-8445-7a06b44abfab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,20 +70,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="49" column="6" lean-forward="true" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+            <state relative-caret-position="323">
+              <caret line="19" column="99" selection-start-line="19" selection-start-column="99" selection-end-line="19" selection-end-column="99" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="34">
+              <caret line="2" column="68" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -122,8 +122,8 @@
         <option value="$PROJECT_DIR$/controllers/controller.js" />
         <option value="$PROJECT_DIR$/public/script.js" />
         <option value="$PROJECT_DIR$/routes/joke.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/config.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -240,7 +240,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32917000" />
+    <option name="totallyTimeSpent" value="32963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -363,17 +363,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="49" column="6" lean-forward="true" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+        <state relative-caret-position="34">
+          <caret line="2" column="68" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.js">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        <state relative-caret-position="323">
+          <caret line="19" column="99" selection-start-line="19" selection-start-column="99" selection-end-line="19" selection-end-column="99" />
         </state>
       </provider>
     </entry>
