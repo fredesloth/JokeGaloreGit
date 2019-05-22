@@ -17,7 +17,7 @@ router
             });
     })
 
-    .post('/jokes', function (req, res) {
+    .post('/', function (req, res) {
         Joke.create(req.body);
           res.send({
               type: 'POST',
