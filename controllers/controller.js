@@ -41,12 +41,12 @@ exports.createJoke = function(setup, punchline) {
     return newJoke.save();
   };
 
-exports.jokeEdit = function(id, setup, punchline) {
-    return joke.findOneAndUpdate(
-        {_id : id},
-        {setup : setup, punchline : punchline},
-        {new : true}).exec();
-};
+// exports.jokeEdit = function(id, setup, punchline) {
+//     return joke.findOneAndUpdate(
+//         {_id : id},
+//         {setup : setup, punchline : punchline},
+//         {new : true}).exec();
+// };
 
 exports.jokeGet = function (id) {
     return joke.findOne({_id: id}).exec();
@@ -56,9 +56,9 @@ exports.jokesGet = function () {
     return joke.find().exec();
 };
 
-exports.jokeDelete = function (id) {
-    return joke.findOneAndDelete({_id : id}).exec();
-};
+// exports.jokeDelete = function (id) {
+//     return joke.findOneAndDelete({_id : id}).exec();
+// };
 
 async function findService (id) {
     const response = await fetch(registryURL + '/api/services');
