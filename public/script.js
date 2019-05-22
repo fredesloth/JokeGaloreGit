@@ -123,9 +123,9 @@ async function editJoke(id) {
 }
 
 // when the btnPost button element is clicked a new joke is posted to the currently selected service and the jokes are being updated
-/*btnPost.onclick = async () => {
+btnPost.onclick = async () => {
     let setup = document.getElementById('setup').value;
-    let punchline = document.getElementById('punchline').value;
+    let punchline = document.getElementById('punchline').value
     if (setup.length > 0 && punchline.length > 0) {
         const msg = {setup: setup, punchline: punchline};
         try {
@@ -133,7 +133,7 @@ async function editJoke(id) {
                 method: "POST",
                 body: JSON.stringify(msg),
                 headers: {'Content-Type': 'application/json'}
-            });
+            })
             if (response.status >= 400 || !response) {
                 throw new Error('Failed to fetch');
             }
@@ -145,7 +145,7 @@ async function editJoke(id) {
             console.log(err);
         }
     }
-};*/
+}
 
 /* btnCreateService.onclick = async () => {
     const data = {name: 'Joke Galore', address: 'https://jokegalore.herokuapp.com/', secret: 'jokeGalore'};
