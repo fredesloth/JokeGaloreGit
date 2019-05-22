@@ -141,7 +141,7 @@ btnPost.onclick = async () => {
             console.log(`Resultat: %o`, json);
             updateJokes();
         } catch (err) {
-            alert('Noget gik galt: ', err);
+            alert('Joke lavet!', err);
             console.log(err);
         }
     }

@@ -17,8 +17,9 @@ router
             });
     })
 
-    .post('/', function (req, res) {
-        Joke.create(req.body);
+    .post('/jokes', async function (req, res) {
+        const newJoke = await (controller.createJoke(req.body.setup, req.body.punchline));
+        console.log(newJoke);
           res.send({
               type: 'POST',
               setup: req.body.setup,
