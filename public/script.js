@@ -80,45 +80,21 @@ async function servicesGet() {
     serviceContainer.innerHTML = HTML;
 }
 
-// Not yet implemented
+// delete joke with id from selected service
 async function deleteJoke(id) {
     try {
-        const response = await fetch('/api/jokes/' + id, {
+        const response = await fetch('/api/othersite/jokes/' + serviceContainer.value + '/' + id, {
             method: 'DELETE',
             headers: {'Content-Type': 'application/json'}
         })
+        if (response.status >= 400 || !response) {
+            throw new Error('Failed to fetch');
+        }
         const json = await response.json();
         console.log(`Resultat: %o`, json);
-        jokesUpdate();
+        updateJokes();
     } catch (err) {
         console.log(err);
-    }
-   
-}
-
-// Not yet implemented
-async function editJoke(id) {
-    const setup = document.getElementById('setup-' + id).innerText;
-    const punchline = document.getElementById('punchline-' + id).innerText;
-    if (setup.length > 0 && punchline.length > 0) {
-        const msg = {
-            setup: setup,
-            punchline: punchline
-        };
-        try {
-            const response = await fetch('/api/jokes/' + id, {
-                method: 'PUT',
-                body: JSON.stringify(msg),
-                headers: {'Content-Type': 'application/json'}
-            })
-            const json = await response.json();
-            console.log(`Result: %o`, json);
-            alert('Your joke has been saved');
-            jokesUpdate();
-        } catch (err) {
-            alert('Sorry, something went wrong: ', err);
-            console.log(err);
-        }
     }
 }
 
