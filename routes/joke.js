@@ -17,16 +17,14 @@ router
             });
     })
 
-    .post('/jokes', (req, res) => {
-        // Create new joke to own db
-        const {setup, punchline} = req.body;
-        controller.createJoke(setup, punchline)
-            .then(result => res.json({message: 'Joke saved!', joke: result}))
-            .catch(err => {
-                console.error("Error: " + err);
-                if (err.stack) console.error(err.stack);
-                res.status(500).send(err);
-            })
+    .post('/', function (req, res) {
+        Joke.create(req.body);
+          res.send({
+              type: 'POST',
+              setup: req.body.setup,
+              punchline: req.body.punchline
+          })
+          })
 
     .get('/jokes/:id', (req, res) => {
         controller.jokeGet(req.params.id)
