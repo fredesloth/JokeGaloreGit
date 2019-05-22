@@ -5,6 +5,8 @@ const registryURL = require('../config').jokeRegistry;
 const fetch = require('node-fetch');
 
 
+
+
 exports.otherSiteJokesGet = async function (id) {
     const allSites = await fetch(registryURL + '/api/services');
     const allSitesJSON = await allSites.json();
@@ -32,7 +34,7 @@ exports.otherSitesGet = async function () {
 
 
 exports.createJoke = function(setup, punchline) {
-    var newJoke = new joke({
+    const newJoke = new joke({
       setup: setup,
       punchline: punchline
     });

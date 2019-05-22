@@ -1,5 +1,6 @@
 {
-  "repository": "https://github.com/RasmusTraeholt/jokeservice",
+  "repository": "https://github.com/fredesloth/JokeGaloreGit",
+  
   "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-nodejs"
