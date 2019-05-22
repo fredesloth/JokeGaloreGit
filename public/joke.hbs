@@ -1,5 +1,6 @@
 <li id="{{id}}">
     <p><span contenteditable="true" id="setup-{{id}}">{{setup}}</span>... <span contenteditable="true" id="punchline-{{id}}">{{punchline}}</span></p>
+    <button type="submit" onclick="deleteJoke(this.parentNode.id)">Delete</button>
 
     {{#each joke}}
         {{setup}} {{punchline}} {{id}}<br/>

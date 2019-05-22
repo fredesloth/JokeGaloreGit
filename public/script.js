@@ -1,5 +1,6 @@
 const jokeContainer = document.getElementById('jokes');
 const btnPost = document.getElementById('btnPost');
+const btnDelete = document.getElementById('btnDelete');
 const serviceContainer = document.getElementById('services');
 const newJokeContainer = document.getElementById('newJoke');
 const maxJokes = 50;
@@ -83,7 +84,7 @@ async function servicesGet() {
 // delete joke with id from selected service
 async function deleteJoke(id) {
     try {
-        const response = await fetch('/api/othersite/jokes/' + serviceContainer.value + '/' + id, {
+        const response = await fetch('/api/jokes/' + id, {
             method: 'DELETE',
             headers: {'Content-Type': 'application/json'}
         })
@@ -92,7 +93,7 @@ async function deleteJoke(id) {
         }
         const json = await response.json();
         console.log(`Resultat: %o`, json);
-        updateJokes();
+        jokesUpdate();
     } catch (err) {
         console.log(err);
     }

@@ -56,9 +56,9 @@ exports.jokesGet = function () {
     return joke.find().exec();
 };
 
-// exports.jokeDelete = function (id) {
-//     return joke.findOneAndDelete({_id : id}).exec();
-// };
+exports.deleteJoke = function (id) {
+    return joke.findOneAndDelete({ _id: id }).exec();
+};
 
 async function findService (id) {
     const response = await fetch(registryURL + '/api/services');

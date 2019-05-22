@@ -69,14 +69,14 @@ router
             });
     })
 
-    // .delete('/jokes/:id', (req, res) => {
-    //     controller.jokeDelete(req.params.id)
-    //         .then(result => res.json({message: 'Joke deleted!', joke: result}))
-    //         .catch(err => {
-    //             console.error("Error: " + err);
-    //             if (err.stack) console.error(err.stack);
-    //             res.status(500).send(err);
-    //         });
-    // });
+    .delete('/jokes/:id', (req, res) => {
+        controller.deleteJoke(req.params.id)
+            .then(result => res.json({message: 'Joke deleted!', joke: result}))
+            .catch(err => {
+                console.error("Error: " + err);
+                if (err.stack) console.error(err.stack);
+                res.status(500).send(err);
+            });
+    });
 
 module.exports = router;

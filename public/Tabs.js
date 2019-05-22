@@ -10,7 +10,7 @@ function openTab(evt, openTab) {
     }
     document.getElementById(openTab).style.display = "block";
     evt.currentTarget.className += " active";
-
+    
 
 }
 
